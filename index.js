@@ -40,26 +40,17 @@ const standardizeInput = function(collection) {
     }
     return undefined;
   }
+    const myFilter = (collection, predicate)=>{
 
-const myFilter2 = function (collection, callback) {
-    let newCollection = standardizeInput(collection);
-    const newArray = [];
-    for (let i = 0; i < newCollection.length; i++) {
-        if (callback(newCollection[i])) {
-            newArray.push(newCollection[i]);
-        }
+    const newCollection = standardizeInput(collection);
+    const newArr = new Array();
+    for (let index = 0; index < newCollection.length; index++) {
+        
+        if(predicate(newCollection[index])) newArr.push(newCollection[index]);
     }
-    return newArray;
+    return newArr;
+
 }
-  const myFilter = function(collection, predicate){
-    let newCollection = standardizeInput(collection);
-    const newArray=[]
-    for(let i=0; i<newCollection.length; i++){
-      if(predicate(newCollection[i]))
-      newArray.push(newCollection[importScripts])
-    }
-    return newArray;
-  }
   
   const mySize = function (collection) {
     const newCollection = standardizeInput(collection);
